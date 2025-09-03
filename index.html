@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tobacco Flavours Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #e6f4ff; /* light sky blue */
+    }
+    h2 {
+      margin-top: 30px;
+      color: #004d80;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, select, textarea {
+      margin-top: 5px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .options {
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+    .options input {
+      margin-right: 6px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    .status {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #004d80;
+    }
+    @media (max-width: 600px) {
+      form {
+        padding: 15px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form id="surveyForm">
+    <!-- SECTION 1 -->
+    <h2>Section 1: Demographics</h2>
+    <label>Age: <input type="number" name="Age" required></label>
+
+    <label>Gender</label>
+    <div class="options">
+      <input type="radio" name="Gender" value="Male"> Male<br>
+      <input type="radio" name="Gender" value="Female"> Female
+    </div>
+
+    <label>Level of education</label>
+    <div class="options">
+      <input type="radio" name="Education" value="No formal education"> No formal education<br>
+      <input type="radio" name="Education" value="Primary school"> Primary school<br>
+      <input type="radio" name="Education" value="Secondary school"> Secondary school<br>
+      <input type="radio" name="Education" value="Tertiary"> Tertiary<br>
+      <input type="radio" name="Education" value="Postgraduate"> Postgraduate
+    </div>
+
+    <label>Have you ever used tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="EverUsed" value="Yes"> Yes<br>
+      <input type="radio" name="EverUsed" value="No"> No
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2>Section 2: Flavour Preferences</h2>
+    <label>Have you ever tried flavored tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="TriedFlavoured" value="Yes"> Yes<br>
+      <input type="radio" name="TriedFlavoured" value="No"> No
+    </div>
+
+    <label>If yes, which flavors have you tried? (Select all that apply)</label>
+    <div class="options">
+      <input type="checkbox" name="FlavoursTried" value="Fruit"> Fruit flavors<br>
+      <input type="checkbox" name="FlavoursTried" value="Sweet"> Sweet flavors<br>
+      <input type="checkbox" name="FlavoursTried" value="Spice"> Spice flavors<br>
+      <input type="checkbox" name="FlavoursTried" value="Other"> Other flavors
+    </div>
+
+    <label>How do you think flavors affect the appeal of tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="Appeal" value="More appealing"> More appealing<br>
+      <input type="radio" name="Appeal" value="Less appealing"> Less appealing<br>
+      <input type="radio" name="Appeal" value="No difference"> No difference
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2>Section 3: Initiation and Use</h2>
+    <label>Do you think flavours make it more likely for young people to try tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="YouthTry" value="Yes"> Yes<br>
+      <input type="radio" name="YouthTry" value="No"> No
+    </div>
+
+    <label>Have you ever used flavoured tobacco or nicotine products because you liked the taste?</label>
+    <div class="options">
+      <input type="radio" name="TasteUse" value="Yes"> Yes<br>
+      <input type="radio" name="TasteUse" value="No"> No
+    </div>
+
+    <label>How often do you use flavoured tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="FlavourUseFreq" value="Daily"> Daily<br>
+      <input type="radio" name="FlavourUseFreq" value="Occasionally"> Occasionally<br>
+      <input type="radio" name="FlavourUseFreq" value="Rarely"> Rarely<br>
+      <input type="radio" name="FlavourUseFreq" value="Never"> Never
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2>Section 4: Nicotine Addiction</h2>
+    <label>Do you think flavoured tobacco or nicotine products are more addictive than non-flavoured products?</label>
+    <div class="options">
+      <input type="radio" name="MoreAddictive" value="Yes"> Yes<br>
+      <input type="radio" name="MoreAddictive" value="No"> No
+    </div>
+
+    <label>Have you ever felt addicted to nicotine or tobacco products?</label>
+    <div class="options">
+      <input type="radio" name="Addicted" value="Yes"> Yes<br>
+      <input type="radio" name="Addicted" value="No"> No
+    </div>
+
+    <label>Do you think flavours contribute to nicotine addiction among young people?</label>
+    <div class="options">
+      <input type="radio" name="FlavoursContribute" value="Yes"> Yes<br>
+      <input type="radio" name="FlavoursContribute" value="No"> No
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2>Section 5: Perceptions and Attitudes</h2>
+    <label>What do you think about the use of flavours in tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="Opinion" value="Good idea"> It's a good way to make products more appealing<br>
+      <input type="radio" name="Opinion" value="Bad idea"> It's a bad idea because it can lead to addiction<br>
+      <input type="radio" name="Opinion" value="Not a big deal"> It's not a big deal
+    </div>
+
+    <label>Do you think flavours should be banned in tobacco or nicotine products?</label>
+    <div class="options">
+      <input type="radio" name="BanFlavours" value="Yes"> Yes<br>
+      <input type="radio" name="BanFlavours" value="No"> No
+    </div>
+
+    <label>Why or why not?</label>
+    <textarea name="BanReason"></textarea>
+
+    <!-- SECTION 6 -->
+    <h2>Section 6: Additional Comments</h2>
+    <label>Is there anything else you'd like to share about flavoured tobacco or nicotine products?</label>
+    <textarea name="AdditionalComments"></textarea>
+
+    <!-- SECTION 7 -->
+    <h2>Section 7: Demographics for Tobacco Retailers</h2>
+    <label>Type of vendor</label>
+    <div class="options">
+      <input type="radio" name="VendorType" value="Retail store"> Retail store<br>
+      <input type="radio" name="VendorType" value="Online seller"> Online seller<br>
+      <input type="radio" name="VendorType" value="Market stall"> Market stall<br>
+      <input type="radio" name="VendorType" value="Other"> Other
+    </div>
+
+    <label>How long have you been selling tobacco products?</label>
+    <div class="options">
+      <input type="radio" name="SellingDuration" value="Less than 1 year"> Less than 1 year<br>
+      <input type="radio" name="SellingDuration" value="1-5 years"> 1-5 years<br>
+      <input type="radio" name="SellingDuration" value="More than 5 years"> More than 5 years
+    </div>
+
+    <h3>7(ii): Flavoured Tobacco Products</h3>
+    <label>Do you sell flavoured tobacco products?</label>
+    <div class="options">
+      <input type="radio" name="SellFlavoured" value="Yes"> Yes<br>
+      <input type="radio" name="SellFlavoured" value="No"> No
+    </div>
+
+    <label>If yes, which types do you sell?</label>
+    <div class="options">
+      <input type="checkbox" name="TypesSold" value="Cigarettes"> Cigarettes<br>
+      <input type="checkbox" name="TypesSold" value="Cigars"> Cigars<br>
+      <input type="checkbox" name="TypesSold" value="E-cigarettes"> E-cigarettes<br>
+      <input type="checkbox" name="TypesSold" value="Hookah"> Hookah tobacco<br>
+      <input type="checkbox" name="TypesSold" value="Smokeless"> Smokeless tobacco<br>
+      <input type="checkbox" name="TypesSold" value="Other"> Other
+    </div>
+
+    <label>Which flavors are most popular among your customers?</label>
+    <div class="options">
+      <input type="checkbox" name="PopularFlavours" value="Fruit"> Fruit<br>
+      <input type="checkbox" name="PopularFlavours" value="Sweet"> Sweet<br>
+      <input type="checkbox" name="PopularFlavours" value="Spice"> Spice<br>
+      <input type="checkbox" name="PopularFlavours" value="Other"> Other
+    </div>
+
+    <h3>7(iii): Sales and Marketing</h3>
+    <label>How do you typically promote your tobacco products?</label>
+    <div class="options">
+      <input type="checkbox" name="Promotion" value="In-store"> In-store displays<br>
+      <input type="checkbox" name="Promotion" value="Advertising"> Advertising<br>
+      <input type="checkbox" name="Promotion" value="Word of mouth"> Word of mouth<br>
+      <input type="checkbox" name="Promotion" value="Online"> Online marketing<br>
+      <input type="checkbox" name="Promotion" value="Other"> Other
+    </div>
+
+    <label>Do you offer discounts or promotions on flavoured tobacco products?</label>
+    <div class="options">
+      <input type="radio" name="Discounts" value="Yes"> Yes<br>
+      <input type="radio" name="Discounts" value="No"> No
+    </div>
+
+    <label>Have you noticed any changes in sales of flavoured tobacco products over time?</label>
+    <div class="options">
+      <input type="radio" name="SalesChanges" value="Yes"> Yes<br>
+      <input type="radio" name="SalesChanges" value="No"> No
+    </div>
+
+    <h3>7(iv): Customer Demographics</h3>
+    <label>What age range of customers typically purchase flavoured tobacco products?</label>
+    <div class="options">
+      <input type="radio" name="CustomerAge" value="Under 18"> Under 18<br>
+      <input type="radio" name="CustomerAge" value="18-24"> 18-24<br>
+      <input type="radio" name="CustomerAge" value="25-34"> 25-34<br>
+      <input type="radio" name="CustomerAge" value="35-44"> 35-44<br>
+      <input type="radio" name="CustomerAge" value="45-54"> 45-54<br>
+      <input type="radio" name="CustomerAge" value="55 or older"> 55 or older
+    </div>
+
+    <label>Do you think flavoured tobacco products are more appealing to younger customers?</label>
+    <div class="options">
+      <input type="radio" name="AppealYoung" value="Yes"> Yes<br>
+      <input type="radio" name="AppealYoung" value="No"> No
+    </div>
+
+    <h3>7(v): Regulations and Policies</h3>
+    <label>Are you aware of any regulations or laws regarding the sale of flavoured tobacco products in your area?</label>
+    <div class="options">
+      <input type="radio" name="RegulationsAware" value="Yes"> Yes<br>
+      <input type="radio" name="RegulationsAware" value="No"> No
+    </div>
+
+    <label>Do you think flavoured tobacco products should be regulated or banned?</label>
+    <div class="options">
+      <input type="radio" name="Regulated" value="Yes"> Yes<br>
+      <input type="radio" name="Regulated" value="No"> No
+    </div>
+
+    <label>Would you be willing to comply with regulations or laws restricting the sale of flavoured tobacco products?</label>
+    <div class="options">
+      <input type="radio" name="Comply" value="Yes"> Yes<br>
+      <input type="radio" name="Comply" value="No"> No
+    </div>
+
+    <label>Is there anything else you'd like to share about the sale of flavoured tobacco products?</label>
+    <textarea name="RetailerComments"></textarea>
+
+    <button type="submit">Submit</button>
+    <p class="status" id="statusMsg"></p>
+  </form>
+
+  <script>
+    const form = document.getElementById("surveyForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const json = {};
+
+      // handle multiple checkboxes properly
+      formData.forEach((value, key) => {
+        if (json[key]) {
+          json[key] += ", " + value;
+        } else {
+          json[key] = value;
+        }
+      });
+
+      document.getElementById("statusMsg").textContent = "Submitting...";
+
+      try {
+        const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+          method: "POST",
+          body: JSON.stringify(json),
+        });
+
+        const result = await response.json();
+        if (result.result === "success") {
+          document.getElementById("statusMsg").textContent = "✅ Thank you! Your response has been recorded.";
+          form.reset();
+        } else {
+          document.getElementById("statusMsg").textContent = "❌ Error: " + result.message;
+        }
+      } catch (err) {
+        document.getElementById("statusMsg").textContent = "⚠️ Submission failed: " + err;
+      }
+    });
+  </script>
+</body>
+</html>
